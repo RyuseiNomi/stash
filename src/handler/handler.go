@@ -34,4 +34,9 @@ func (sw *stashWorker) Handle() {
 			panic(err)
 		}
 	}
+	if sw.args == "show" {
+		if err := cm.Show(); err != nil {
+			panic(err)
+		}
+	}
 }
