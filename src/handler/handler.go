@@ -18,7 +18,6 @@ func NewStashWorker(a string) *stashWorker {
 
 // Handle the aggregation point of all of process
 func (sw *stashWorker) Handle() {
-	// ユーザに「save」「pop」「list」「show」のいずれかを選ばせる
 	if sw.args == "save" {
 		if err := cm.Save(); err != nil {
 			panic(err)
