@@ -7,6 +7,7 @@ import (
 	"os/exec"
 )
 
+// Pop stashした内容を取り出す
 func Pop() error {
 	if err := List(); err != nil {
 		return err
@@ -21,6 +22,6 @@ func Pop() error {
 	if err != nil {
 		return err
 	}
-	fmt.Println("stashが完了しました")
+	fmt.Println("stashした内容の取り出しが完了しました。")
 	return nil
 }
