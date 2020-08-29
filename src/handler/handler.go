@@ -24,4 +24,9 @@ func (sw *stashWorker) Handle() {
 			panic(err)
 		}
 	}
+	if sw.args == "list" {
+		if err := cm.List(); err != nil {
+			panic(err)
+		}
+	}
 }
