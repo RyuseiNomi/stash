@@ -29,4 +29,9 @@ func (sw *stashWorker) Handle() {
 			panic(err)
 		}
 	}
+	if sw.args == "pop" {
+		if err := cm.Pop(); err != nil {
+			panic(err)
+		}
+	}
 }
