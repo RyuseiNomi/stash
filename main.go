@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"github.com/RyuseiNomi/stash/src/handler"
 	"log"
 	"os"
 
@@ -13,7 +13,8 @@ func main() {
 		Name:  "stash",
 		Usage: "an effective tool to stash your work",
 		Action: func(c *cli.Context) error {
-			fmt.Println("hello")
+			sw := handler.NewStashWorker(c.Args().Get(0))
+			sw.Handle()
 			return nil
 		},
 	}

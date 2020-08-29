@@ -12,5 +12,11 @@ build:
 test:
 	$(GOTEST) -v ./...
 
-exec-dev:
-	$(GOBUILD) -o $(BINARY_NAME); ./$(BINARY_NAME)
+exec-dev-save:
+	$(GOBUILD) -o $(BINARY_NAME); ./$(BINARY_NAME) save
+exec-dev-pop:
+	$(GOBUILD) -o $(BINARY_NAME); ./$(BINARY_NAME) pop
+exec-dev-show:
+	$(GOBUILD) -o $(BINARY_NAME); ./$(BINARY_NAME) show
+exec-dev-list:
+	$(GOBUILD) -o $(BINARY_NAME); ./$(BINARY_NAME) list
